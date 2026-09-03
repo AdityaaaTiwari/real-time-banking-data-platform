@@ -29,7 +29,7 @@ The platform uses **Debezium + Apache Kafka** for Change Data Capture, **MinIO**
 
 The following architecture shows the complete data flow from the operational banking database to the analytics layer.
 
-![Real-Time Banking Data Platform Architecture](architecture.png)
+architecture.png
 
 ### 🔄 Pipeline Flow
 
