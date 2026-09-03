@@ -34,7 +34,6 @@ The following architecture shows the complete data flow from the operational ban
 ### 🔄 Pipeline Flow
 
 🐘 PostgreSQL → 🔄 Debezium → 📡 Kafka → 🪣 MinIO → ⚙️ Airflow → ❄️ Snowflake → 🧱 dbt → 📊 Analytics
-````
 
 ---
 
