@@ -27,34 +27,13 @@ The platform uses **Debezium + Apache Kafka** for Change Data Capture, **MinIO**
 
 ## 🏗️ Architecture
 
-```mermaid
-flowchart LR
+The following architecture shows the complete data flow from the operational banking database to the analytics layer.
 
-    A[🐘 PostgreSQL<br/>OLTP Source]
-    B[🔄 Debezium<br/>CDC]
-    C[📡 Apache Kafka<br/>Streaming]
-    D[🪣 MinIO<br/>Raw Storage]
-    E[⚙️ Apache Airflow<br/>Orchestration]
-    F[❄️ Snowflake<br/>Data Warehouse]
-    G[🧱 dbt<br/>Transformation]
-    H[📊 Analytics / BI]
+![Real-Time Banking Data Platform Architecture](architecture.png)
 
-    B1[🥉 Bronze]
-    B2[🥈 Silver]
-    B3[🥇 Gold]
+### 🔄 Pipeline Flow
 
-    A -->|CDC| B
-    B -->|Events| C
-    C -->|Raw Events| D
-    D -->|Ingestion| E
-    E -->|Load| F
-
-    F --> B1
-    B1 --> B2
-    B2 --> B3
-
-    B3 --> G
-    G --> H
+🐘 PostgreSQL → 🔄 Debezium → 📡 Kafka → 🪣 MinIO → ⚙️ Airflow → ❄️ Snowflake → 🧱 dbt → 📊 Analytics
 ````
 
 ---
