@@ -1,4 +1,3 @@
-```markdown
 ## 🏦 Real-Time Banking Data Platform
 
 > ⚡ An end-to-end Data Engineering platform for real-time banking data ingestion, CDC, orchestration, transformation, and analytics.
